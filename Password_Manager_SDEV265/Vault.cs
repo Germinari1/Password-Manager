@@ -50,15 +50,6 @@ namespace Password_Manager_SDEV265
         }
 
         /// <summary>
-        /// Removes a platform credential from the vault.
-        /// </summary>
-        /// <param name="credential">The platform credential to be removed.</param>
-        public void RemoveCredential(PlatformCredentials credential)
-        {
-            _credentials.Remove(credential);
-        }
-
-        /// <summary>
         /// Retrieves the list of platform credentials stored in the vault.
         /// </summary>
         /// <returns>A list of PlatformCredentials objects.</returns>
@@ -85,10 +76,9 @@ namespace Password_Manager_SDEV265
         {
             if (_user.VerifyMasterPassword(masterPassword))
             {
-                // Call the encryption method of each PlatformCredentials object
                 foreach (PlatformCredentials credential in _credentials)
                 {
-                    credential.Encrypt(masterPassword);
+                    credential.EncryptPassword(masterPassword);
                 }
             }
             else
@@ -106,10 +96,9 @@ namespace Password_Manager_SDEV265
         {
             if (_user.VerifyMasterPassword(masterPassword))
             {
-                // Call the decryption method of each PlatformCredentials object
                 foreach (PlatformCredentials credential in _credentials)
                 {
-                    credential.Decrypt(masterPassword);
+                    string _ = credential.Password; // Trigger decryption without using the decrypted value
                 }
             }
             else
