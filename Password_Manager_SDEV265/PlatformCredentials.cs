@@ -14,6 +14,8 @@ namespace Password_Manager_SDEV265
         private string _platform;
         private byte[] _encryptedPassword;
         private string _notes;
+        private string _encryptedKey;
+        private string _encryptedIV;
 
         /// <summary>
         /// Initializes a new instance of the PlatformCredentials class with the provided platform, password, and optional notes.
@@ -27,8 +29,6 @@ namespace Password_Manager_SDEV265
             _notes = notes;
             EncryptPassword(password);
         }
-
-
 
         /// <summary>
         /// Gets the name of the platform or website.
@@ -89,6 +89,10 @@ namespace Password_Manager_SDEV265
                     }
                     _encryptedPassword = msEncrypt.ToArray();
                 }
+
+                // Store the key and IV in encrypted form using DPAPI
+                _encryptedKey = ProtectedData.Protect(aesAlg.Key, null, DataProtectionScope.CurrentUser);
+                _encryptedIV = ProtectedData.Protect(aesAlg.IV, null, DataProtectionScope.CurrentUser);
             }
         }
 
@@ -96,19 +100,18 @@ namespace Password_Manager_SDEV265
         /// Decrypts the stored encrypted password using AES decryption and returns the decrypted password.
         /// </summary>
         /// <returns>The decrypted password.</returns>
-        private string DecryptPassword()
+        public string DecryptPassword()
         {
-            // Use the same key and IV for decryption
+            // Retrieve the key and IV from secure storage (DPAPI)
+            byte[] key = ProtectedData.Unprotect(Convert.FromBase64String(_encryptedKey), null, DataProtectionScope.CurrentUser);
+            byte[] iv = ProtectedData.Unprotect(Convert.FromBase64String(_encryptedIV), null, DataProtectionScope.CurrentUser);
+
+            // Decrypt the password using the retrieved key and IV
             using (Aes aesAlg = Aes.Create())
             {
-                
-                /*
-                 TODO: IMPLEMENT KEY AND IV RETRIEVAL FROM SECURE STORAGE
-                 */
-
                 aesAlg.KeySize = 256; // Recommended key size
-                aesAlg.Key = /* Retrieve the key from secure storage */;
-                aesAlg.IV = /* Retrieve the IV from secure storage */;
+                aesAlg.Key = key;
+                aesAlg.IV = iv;
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
                 using (MemoryStream msDecrypt = new MemoryStream(_encryptedPassword))
