@@ -28,6 +28,8 @@ namespace Password_Manager_SDEV265
             EncryptPassword(password);
         }
 
+
+
         /// <summary>
         /// Gets the name of the platform or website.
         /// </summary>
@@ -54,9 +56,13 @@ namespace Password_Manager_SDEV265
         }
 
         /// <summary>
-        /// Gets the notes or additional information related to the credential.
+        /// Gets or sets the notes or additional information related to the credential.
         /// </summary>
-        public string Notes => _notes;
+        public string Notes
+        {
+            get => _notes;
+            set => _notes = value;
+        }
 
         /// <summary>
         /// Encrypts the provided password using AES encryption and stores the encrypted value.
@@ -95,6 +101,11 @@ namespace Password_Manager_SDEV265
             // Use the same key and IV for decryption
             using (Aes aesAlg = Aes.Create())
             {
+                
+                /*
+                 TODO: IMPLEMENT KEY AND IV RETRIEVAL FROM SECURE STORAGE
+                 */
+
                 aesAlg.KeySize = 256; // Recommended key size
                 aesAlg.Key = /* Retrieve the key from secure storage */;
                 aesAlg.IV = /* Retrieve the IV from secure storage */;
