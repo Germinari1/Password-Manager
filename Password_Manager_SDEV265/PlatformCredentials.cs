@@ -91,8 +91,8 @@ namespace Password_Manager_SDEV265
                 }
 
                 // Store the key and IV in encrypted form using DPAPI
-                _encryptedKey = ProtectedData.Protect(aesAlg.Key, null, DataProtectionScope.CurrentUser);
-                _encryptedIV = ProtectedData.Protect(aesAlg.IV, null, DataProtectionScope.CurrentUser);
+                _encryptedKey = Convert.ToBase64String(ProtectedData.Protect(aesAlg.Key, null, DataProtectionScope.CurrentUser));
+                _encryptedIV = Convert.ToBase64String(ProtectedData.Protect(aesAlg.IV, null, DataProtectionScope.CurrentUser));
             }
         }
 
