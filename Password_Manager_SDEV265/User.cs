@@ -9,7 +9,7 @@ namespace Password_Manager_SDEV265
     /// </summary>
     public class User
     {
-        private PlatformCredentials _masterCredentials;
+        public PlatformCredentialsV2 _masterCredentials;
 
         /// <summary>
         /// Initializes a new instance of the User class with the provided username and master password.
@@ -22,7 +22,7 @@ namespace Password_Manager_SDEV265
             byte[] salt = GenerateSalt();
             byte[] hashedPassword = HashPassword(masterPassword, salt);
 
-            _masterCredentials = new PlatformCredentials(username, Convert.ToBase64String(hashedPassword), Convert.ToBase64String(salt));
+            _masterCredentials = new PlatformCredentialsV2(username, Convert.ToBase64String(hashedPassword), Convert.ToBase64String(salt));
         }
 
         /// <summary>

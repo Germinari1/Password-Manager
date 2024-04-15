@@ -3,6 +3,10 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
+/*
+ *  THIS IS AN OBSOLETE CLASS, WHICH HAS BEEN REPLACED BY THE PlatformCredentialsV2 CLASS. AFTER TEAM ALIGNMENT, THIS CLASS WILL BE REMOVED OR SIMPLE NOT USED
+*/
+
 namespace Password_Manager_SDEV265
 {
     /// <summary>
@@ -126,5 +130,6 @@ namespace Password_Manager_SDEV265
                 }
             }
         }
+
     }
 }

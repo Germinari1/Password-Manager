@@ -13,8 +13,8 @@ namespace Password_Manager_SDEV265
     /// </summary>
     public class Vault
     {
-        private User _user;
-        private List<PlatformCredentials> _credentials;
+        public User _user;
+        private List<PlatformCredentialsV2> _credentials;
 
         /// <summary>
         /// Initializes a new instance of the Vault class with the provided username and master password.
@@ -24,7 +24,7 @@ namespace Password_Manager_SDEV265
         public Vault(string username, string masterPassword)
         {
             _user = new User(username, masterPassword);
-            _credentials = new List<PlatformCredentials>();
+            _credentials = new List<PlatformCredentialsV2>();
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Password_Manager_SDEV265
         /// <param name="notes">Optional notes or additional information related to the credential.</param>
         public void AddCredential(string platform, string password, string notes = null)
         {
-            PlatformCredentials credential = new PlatformCredentials(platform, password, notes);
+            PlatformCredentialsV2 credential = new PlatformCredentialsV2(platform, password, notes);
             _credentials.Add(credential);
         }
 
@@ -53,7 +53,7 @@ namespace Password_Manager_SDEV265
         /// Retrieves the list of platform credentials stored in the vault.
         /// </summary>
         /// <returns>A list of PlatformCredentials objects.</returns>
-        public List<PlatformCredentials> GetCredentials()
+        public List<PlatformCredentialsV2> GetCredentials()
         {
             return _credentials;
         }
@@ -76,9 +76,9 @@ namespace Password_Manager_SDEV265
         {
             if (_user.VerifyMasterPassword(masterPassword))
             {
-                foreach (PlatformCredentials credential in _credentials)
+                foreach (PlatformCredentialsV2 credential in _credentials)
                 {
-                    credential.EncryptPassword(masterPassword);
+                    credential.EncryptPassword(credential.Password);
                 }
             }
             else
@@ -96,7 +96,7 @@ namespace Password_Manager_SDEV265
         {
             if (_user.VerifyMasterPassword(masterPassword))
             {
-                foreach (PlatformCredentials credential in _credentials)
+                foreach (PlatformCredentialsV2 credential in _credentials)
                 {
                     string _ = credential.Password; // Trigger decryption without using the decrypted value
                 }
