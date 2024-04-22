@@ -57,6 +57,33 @@ public class PlatformCredentialsV2
             set => _notes = value;
         }
 
+
+        public static string GeneratePassword()
+        {
+            const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=[{]};:>|./?";
+            int minLength = 12;
+            int maxLength = 24;
+
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] byteBuffer = new byte[sizeof(int)];
+                rng.GetBytes(byteBuffer);
+                int seed = BitConverter.ToInt32(byteBuffer, 0);
+                Random random = new Random(seed);
+
+                int length = random.Next(minLength, maxLength + 1);
+                StringBuilder password = new StringBuilder(length);
+
+                for (int i = 0; i < length; i++)
+                {
+                    password.Append(validChars[random.Next(validChars.Length)]);
+                }
+
+                return password.ToString();
+            }
+        }
+
+
         public void EncryptPassword(string password)
         {
             byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
