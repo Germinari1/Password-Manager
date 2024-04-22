@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Author: Lucas Germinari Carreira
+// Last modified: 04/16/2024
+// Description(class implementation file): This file contains the Vault class, which has the purpose of managing the user's credentials and providing secure access to the vault.
+// Notes: 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

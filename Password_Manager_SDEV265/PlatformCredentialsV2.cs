@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Author: Lucas Germinari Carreira
+// Last modified: 04/16/2024
+// Description(class implementation file): This file contains the PlatformCredentialsV2 class, which is used to store platform credentials in a secure way. Also, it defined the AESThenHMAC class, which is used to encrypt and decrypt the credentials.
+// Notes: Encryption algorithm used: AES (Advanced Encryption Standard)
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+
+using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -90,7 +97,7 @@ public class PlatformCredentialsV2
         /// Helper that generates a random key on each call.
         /// </summary>
         /// <returns></returns>
-        public static byte[] NewKey()
+        public static byte[] NewKey()   
         {
             var key = new byte[KeyBitSize / 8];
             Random.GetBytes(key);
