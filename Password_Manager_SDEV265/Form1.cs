@@ -5,13 +5,6 @@
 // Notes: 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Password_Manager_SDEV265
@@ -56,8 +49,12 @@ namespace Password_Manager_SDEV265
             // Authenticate the user
             if (user.VerifyMasterPassword(password))
             {
+                //create vault for user
+                Vault vault = new Vault(username, password);
+
                 // Authentication successful
                 ApplicationContext.CurrentUser = user;
+                ApplicationContext.Vault = vault;
                 MessageBox.Show("Login successful!");
 
                 // Show Form3
