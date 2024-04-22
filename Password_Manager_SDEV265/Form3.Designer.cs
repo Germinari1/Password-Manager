@@ -88,7 +88,7 @@
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(114, 26);
             this.btn2.TabIndex = 9;
-            this.btn2.Text = "Add new credentials";
+            this.btn2.Text = "Generate Password";
             this.btn2.UseVisualStyleBackColor = false;
             // 
             // txb3
