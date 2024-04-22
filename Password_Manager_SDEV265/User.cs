@@ -22,8 +22,10 @@ namespace Password_Manager_SDEV265
         /// </summary>
         /// <param name="username">The user's username or email address.</param>
         /// <param name="masterPassword">The user's master password for securing the vault.</param>
+        public string _username;
         public User(string username, string masterPassword="defaultPSW")
         {
+            _username = username;
             // Hash and salt the master password
             byte[] salt = GenerateSalt();
             byte[] hashedPassword = HashPassword(masterPassword, salt);
