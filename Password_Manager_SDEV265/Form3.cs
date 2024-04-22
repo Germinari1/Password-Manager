@@ -16,5 +16,11 @@ namespace Password_Manager_SDEV265
         {
             InitializeComponent();
         }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            string randomPsw = PlatformCredentialsV2.GeneratePassword();
+            txb6.Text = randomPsw;
+        }
     }
 }
