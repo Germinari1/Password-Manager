@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl2 = new System.Windows.Forms.Panel();
+            this.platformNameValidationLabel = new System.Windows.Forms.Label();
             this.btn3 = new System.Windows.Forms.Button();
             this.txb6 = new System.Windows.Forms.TextBox();
             this.btn2 = new System.Windows.Forms.Button();
@@ -39,12 +40,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
             this.dgv3 = new System.Windows.Forms.DataGridView();
+            this.selectedPlatformLabel = new System.Windows.Forms.Label();
+            this.displayCredentials = new System.Windows.Forms.Button();
             this.pnl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl2
             // 
+            this.pnl2.Controls.Add(this.displayCredentials);
+            this.pnl2.Controls.Add(this.selectedPlatformLabel);
+            this.pnl2.Controls.Add(this.platformNameValidationLabel);
             this.pnl2.Controls.Add(this.btn3);
             this.pnl2.Controls.Add(this.txb6);
             this.pnl2.Controls.Add(this.btn2);
@@ -59,6 +65,16 @@
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(570, 572);
             this.pnl2.TabIndex = 8;
+            // 
+            // platformNameValidationLabel
+            // 
+            this.platformNameValidationLabel.AutoSize = true;
+            this.platformNameValidationLabel.Location = new System.Drawing.Point(322, 290);
+            this.platformNameValidationLabel.Name = "platformNameValidationLabel";
+            this.platformNameValidationLabel.Size = new System.Drawing.Size(51, 20);
+            this.platformNameValidationLabel.TabIndex = 12;
+            this.platformNameValidationLabel.Text = "label1";
+            this.platformNameValidationLabel.Visible = false;
             // 
             // btn3
             // 
@@ -89,6 +105,7 @@
             this.btn2.TabIndex = 9;
             this.btn2.Text = "Add new credential";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // txb3
             // 
@@ -149,6 +166,27 @@
             this.dgv3.Size = new System.Drawing.Size(225, 572);
             this.dgv3.TabIndex = 13;
             // 
+            // selectedPlatformLabel
+            // 
+            this.selectedPlatformLabel.AutoSize = true;
+            this.selectedPlatformLabel.Location = new System.Drawing.Point(322, 491);
+            this.selectedPlatformLabel.Name = "selectedPlatformLabel";
+            this.selectedPlatformLabel.Size = new System.Drawing.Size(142, 20);
+            this.selectedPlatformLabel.TabIndex = 13;
+            this.selectedPlatformLabel.Text = "Selected platform: ";
+            // 
+            // displayCredentials
+            // 
+            this.displayCredentials.BackColor = System.Drawing.SystemColors.ControlText;
+            this.displayCredentials.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.displayCredentials.Location = new System.Drawing.Point(352, 529);
+            this.displayCredentials.Name = "displayCredentials";
+            this.displayCredentials.Size = new System.Drawing.Size(171, 40);
+            this.displayCredentials.TabIndex = 14;
+            this.displayCredentials.Text = "Display credential";
+            this.displayCredentials.UseVisualStyleBackColor = false;
+            this.displayCredentials.Click += new System.EventHandler(this.displayCredentials_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -179,5 +217,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.DataGridView dgv3;
+        private System.Windows.Forms.Label platformNameValidationLabel;
+        private System.Windows.Forms.Label selectedPlatformLabel;
+        private System.Windows.Forms.Button displayCredentials;
     }
 }

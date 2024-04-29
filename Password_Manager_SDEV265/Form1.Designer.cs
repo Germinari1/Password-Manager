@@ -133,6 +133,7 @@
             this.dgv2.RowTemplate.Height = 24;
             this.dgv2.Size = new System.Drawing.Size(260, 294);
             this.dgv2.TabIndex = 11;
+            this.dgv2.Visible = false;
             // 
             // Form1
             // 

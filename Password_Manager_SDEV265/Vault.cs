@@ -20,7 +20,7 @@ namespace Password_Manager_SDEV265
     public class Vault
     {
         public User _user;
-        private List<PlatformCredentialsV2> _credentials;
+        public List<PlatformCredentialsV2> _credentials;
 
         /// <summary>
         /// Initializes a new instance of the Vault class with the provided username and master password.
@@ -111,6 +111,16 @@ namespace Password_Manager_SDEV265
             {
                 throw new Exception("Invalid master password.");
             }
+        }
+
+        /// <summary>
+        /// Checks if a credential with the given platform name already exists in the vault.
+        /// </summary>
+        /// <param name="platformName">The name of the platform to check for.</param>
+        /// <returns>True if a credential with the given platform name exists, false otherwise.</returns>
+        public bool CredentialExists(string platformName)
+        {
+            return _credentials.Any(c => c.Platform == platformName);
         }
     }
 }
