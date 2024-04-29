@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.descriptionLabel_ = new System.Windows.Forms.TextBox();
+            this.passwordLabel_ = new System.Windows.Forms.TextBox();
+            this.platformLabel_ = new System.Windows.Forms.TextBox();
             this.btn6 = new System.Windows.Forms.Button();
-            this.descriptionLabel = new System.Windows.Forms.Label();
             this.lbl12 = new System.Windows.Forms.Label();
-            this.platformLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.btn5 = new System.Windows.Forms.Button();
+            this.returnMainMenu = new System.Windows.Forms.Button();
             this.lbl11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl9 = new System.Windows.Forms.Label();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.platformLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.dgv4 = new System.Windows.Forms.DataGridView();
-            this.platformLabel_ = new System.Windows.Forms.TextBox();
-            this.passwordLabel_ = new System.Windows.Forms.TextBox();
-            this.descriptionLabel_ = new System.Windows.Forms.TextBox();
+            this.tempDebug = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv4)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,7 @@
             this.panel1.Controls.Add(this.platformLabel_);
             this.panel1.Controls.Add(this.btn6);
             this.panel1.Controls.Add(this.lbl12);
-            this.panel1.Controls.Add(this.btn5);
+            this.panel1.Controls.Add(this.returnMainMenu);
             this.panel1.Controls.Add(this.lbl11);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lbl10);
@@ -64,6 +65,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 554);
             this.panel1.TabIndex = 11;
+            // 
+            // descriptionLabel_
+            // 
+            this.descriptionLabel_.Location = new System.Drawing.Point(37, 325);
+            this.descriptionLabel_.Multiline = true;
+            this.descriptionLabel_.Name = "descriptionLabel_";
+            this.descriptionLabel_.Size = new System.Drawing.Size(355, 158);
+            this.descriptionLabel_.TabIndex = 17;
+            // 
+            // passwordLabel_
+            // 
+            this.passwordLabel_.Location = new System.Drawing.Point(37, 228);
+            this.passwordLabel_.Name = "passwordLabel_";
+            this.passwordLabel_.Size = new System.Drawing.Size(355, 26);
+            this.passwordLabel_.TabIndex = 16;
+            // 
+            // platformLabel_
+            // 
+            this.platformLabel_.Location = new System.Drawing.Point(37, 143);
+            this.platformLabel_.Name = "platformLabel_";
+            this.platformLabel_.Size = new System.Drawing.Size(355, 26);
+            this.platformLabel_.TabIndex = 15;
             // 
             // btn6
             // 
@@ -75,16 +98,7 @@
             this.btn6.TabIndex = 14;
             this.btn6.Text = "Save";
             this.btn6.UseVisualStyleBackColor = false;
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.descriptionLabel.Location = new System.Drawing.Point(233, 394);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(60, 20);
-            this.descriptionLabel.TabIndex = 13;
-            this.descriptionLabel.Text = "label11";
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // lbl12
             // 
@@ -96,36 +110,17 @@
             this.lbl12.TabIndex = 12;
             this.lbl12.Text = "Description";
             // 
-            // platformLabel
+            // returnMainMenu
             // 
-            this.platformLabel.AutoSize = true;
-            this.platformLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.platformLabel.Location = new System.Drawing.Point(233, 212);
-            this.platformLabel.Name = "platformLabel";
-            this.platformLabel.Size = new System.Drawing.Size(60, 20);
-            this.platformLabel.TabIndex = 11;
-            this.platformLabel.Text = "label10";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.passwordLabel.Location = new System.Drawing.Point(233, 297);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(51, 20);
-            this.passwordLabel.TabIndex = 10;
-            this.passwordLabel.Text = "label2";
-            // 
-            // btn5
-            // 
-            this.btn5.BackColor = System.Drawing.SystemColors.ControlText;
-            this.btn5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn5.Location = new System.Drawing.Point(124, 489);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(165, 40);
-            this.btn5.TabIndex = 8;
-            this.btn5.Text = "Return to menu";
-            this.btn5.UseVisualStyleBackColor = false;
+            this.returnMainMenu.BackColor = System.Drawing.SystemColors.ControlText;
+            this.returnMainMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.returnMainMenu.Location = new System.Drawing.Point(124, 489);
+            this.returnMainMenu.Name = "returnMainMenu";
+            this.returnMainMenu.Size = new System.Drawing.Size(165, 40);
+            this.returnMainMenu.TabIndex = 8;
+            this.returnMainMenu.Text = "Return to menu";
+            this.returnMainMenu.UseVisualStyleBackColor = false;
+            this.returnMainMenu.Click += new System.EventHandler(this.returnMainMenu_Click);
             // 
             // lbl11
             // 
@@ -166,6 +161,36 @@
             this.lbl9.TabIndex = 0;
             this.lbl9.Text = "This is your information.";
             // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.descriptionLabel.Location = new System.Drawing.Point(233, 394);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(60, 20);
+            this.descriptionLabel.TabIndex = 13;
+            this.descriptionLabel.Text = "label11";
+            // 
+            // platformLabel
+            // 
+            this.platformLabel.AutoSize = true;
+            this.platformLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.platformLabel.Location = new System.Drawing.Point(233, 212);
+            this.platformLabel.Name = "platformLabel";
+            this.platformLabel.Size = new System.Drawing.Size(60, 20);
+            this.platformLabel.TabIndex = 11;
+            this.platformLabel.Text = "label10";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.passwordLabel.Location = new System.Drawing.Point(233, 297);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(51, 20);
+            this.passwordLabel.TabIndex = 10;
+            this.passwordLabel.Text = "label2";
+            // 
             // dgv4
             // 
             this.dgv4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -176,33 +201,21 @@
             this.dgv4.Size = new System.Drawing.Size(450, 554);
             this.dgv4.TabIndex = 12;
             // 
-            // platformLabel_
+            // tempDebug
             // 
-            this.platformLabel_.Location = new System.Drawing.Point(37, 143);
-            this.platformLabel_.Name = "platformLabel_";
-            this.platformLabel_.Size = new System.Drawing.Size(355, 26);
-            this.platformLabel_.TabIndex = 15;
-            // 
-            // passwordLabel_
-            // 
-            this.passwordLabel_.Location = new System.Drawing.Point(37, 228);
-            this.passwordLabel_.Name = "passwordLabel_";
-            this.passwordLabel_.Size = new System.Drawing.Size(355, 26);
-            this.passwordLabel_.TabIndex = 16;
-            // 
-            // descriptionLabel_
-            // 
-            this.descriptionLabel_.Location = new System.Drawing.Point(37, 325);
-            this.descriptionLabel_.Multiline = true;
-            this.descriptionLabel_.Name = "descriptionLabel_";
-            this.descriptionLabel_.Size = new System.Drawing.Size(355, 158);
-            this.descriptionLabel_.TabIndex = 17;
+            this.tempDebug.AutoSize = true;
+            this.tempDebug.Location = new System.Drawing.Point(152, 100);
+            this.tempDebug.Name = "tempDebug";
+            this.tempDebug.Size = new System.Drawing.Size(51, 20);
+            this.tempDebug.TabIndex = 14;
+            this.tempDebug.Text = "label1";
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 692);
+            this.Controls.Add(this.tempDebug);
             this.Controls.Add(this.dgv4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.platformLabel);
@@ -228,7 +241,7 @@
         private System.Windows.Forms.Label lbl12;
         private System.Windows.Forms.Label platformLabel;
         private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button returnMainMenu;
         private System.Windows.Forms.Label lbl11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl10;
@@ -237,5 +250,6 @@
         private System.Windows.Forms.TextBox descriptionLabel_;
         private System.Windows.Forms.TextBox passwordLabel_;
         private System.Windows.Forms.TextBox platformLabel_;
+        private System.Windows.Forms.Label tempDebug;
     }
 }

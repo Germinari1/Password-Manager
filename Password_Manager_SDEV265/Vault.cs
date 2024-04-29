@@ -34,6 +34,25 @@ namespace Password_Manager_SDEV265
         }
 
         /// <summary>
+        /// Updates an existing credential in the vault with a new PlatformCredentialsV2 object.
+        /// </summary>
+        /// <param name="platformName">The name of the platform to update.</param>
+        /// <param name="updatedCredential">The new PlatformCredentialsV2 object containing the updated information.</param>
+        /// <returns>True if the credential was successfully updated, false otherwise.</returns>
+        public bool UpdateCredential(string platformName, PlatformCredentialsV2 updatedCredential)
+        {
+            int indexToUpdate = _credentials.FindIndex(c => c.Platform == platformName);
+
+            if (indexToUpdate != -1)
+            {
+                _credentials[indexToUpdate] = updatedCredential;
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Authenticates the user by verifying the entered password against the stored master password.
         /// </summary>
         /// <param name="enteredPassword">The password entered by the user.</param>

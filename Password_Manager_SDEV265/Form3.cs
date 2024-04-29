@@ -22,13 +22,19 @@ namespace Password_Manager_SDEV265
             -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
             if (lstb1.SelectedItem != null)
             {
+                string platformLabelStdState = "Selected Platform: ";
+                
                 string selectedPlatform = lstb1.SelectedItem.ToString();
                 if (ApplicationContext.PlatformCredentialsMap.TryGetValue(selectedPlatform, out PlatformCredentialsV2 credential))
                 {
                     //update selected credential on application context
                     ApplicationContext.SelectedCredential = credential;
-                    //update GUI label with selected credential
-                    selectedPlatformLabel.Text = credential.Platform;
+                    
+                    //reset platform label text to its standard state
+                    selectedPlatformLabel.Text = platformLabelStdState;
+
+                    //update platform label with selected credential
+                    selectedPlatformLabel.Text += credential.Platform;
                 }
                 else
                 {
@@ -44,8 +50,15 @@ namespace Password_Manager_SDEV265
         public Form3()
         {
             InitializeComponent();
+            
             //subscribe the text box to the Lstb1_SelectedIndexChanged event handler. This is triggered en the user selects an item in the listbox.
             lstb1.SelectedIndexChanged += Lstb1_SelectedIndexChanged;
+
+            //populate listbox with platform names
+            foreach (string platform in ApplicationContext.PlatformCredentialsMap.Keys)
+            {
+                lstb1.Items.Add(platform);
+            }
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -57,6 +70,9 @@ namespace Password_Manager_SDEV265
 
         private void btn2_Click(object sender, EventArgs e)
         {
+            /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            // Adds a new credential to the vault and updates the listbox
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
             //create and store new credential if platform and password field are not empty
             if (txb3.Text.Length != 0 && txb4.Text.Length != 0) {
 
@@ -86,6 +102,10 @@ namespace Password_Manager_SDEV265
             /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
             // Takes user to form 4, where they will be prompted for authentication.
             -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+            if(_form4 == null)
+            {
+                _form4 = new Form4();
+            }
             _form4.Show();
             this.Hide();
         }
