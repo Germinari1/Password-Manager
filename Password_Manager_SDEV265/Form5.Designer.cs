@@ -62,7 +62,7 @@
             // 
             // descriptionLabel_
             // 
-            this.descriptionLabel_.Location = new System.Drawing.Point(37, 325);
+            this.descriptionLabel_.Location = new System.Drawing.Point(96, 325);
             this.descriptionLabel_.Multiline = true;
             this.descriptionLabel_.Name = "descriptionLabel_";
             this.descriptionLabel_.Size = new System.Drawing.Size(355, 158);
@@ -70,14 +70,14 @@
             // 
             // passwordLabel_
             // 
-            this.passwordLabel_.Location = new System.Drawing.Point(37, 228);
+            this.passwordLabel_.Location = new System.Drawing.Point(96, 228);
             this.passwordLabel_.Name = "passwordLabel_";
             this.passwordLabel_.Size = new System.Drawing.Size(355, 26);
             this.passwordLabel_.TabIndex = 16;
             // 
             // platformLabel_
             // 
-            this.platformLabel_.Location = new System.Drawing.Point(37, 143);
+            this.platformLabel_.Location = new System.Drawing.Point(96, 143);
             this.platformLabel_.Name = "platformLabel_";
             this.platformLabel_.Size = new System.Drawing.Size(355, 26);
             this.platformLabel_.TabIndex = 15;
@@ -86,7 +86,7 @@
             // 
             this.btn6.BackColor = System.Drawing.SystemColors.ControlText;
             this.btn6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn6.Location = new System.Drawing.Point(33, 489);
+            this.btn6.Location = new System.Drawing.Point(92, 489);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(84, 40);
             this.btn6.TabIndex = 14;
@@ -98,7 +98,7 @@
             // 
             this.lbl12.AutoSize = true;
             this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl12.Location = new System.Drawing.Point(33, 297);
+            this.lbl12.Location = new System.Drawing.Point(92, 297);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(111, 22);
             this.lbl12.TabIndex = 12;
@@ -108,7 +108,7 @@
             // 
             this.returnMainMenu.BackColor = System.Drawing.SystemColors.ControlText;
             this.returnMainMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.returnMainMenu.Location = new System.Drawing.Point(124, 489);
+            this.returnMainMenu.Location = new System.Drawing.Point(183, 489);
             this.returnMainMenu.Name = "returnMainMenu";
             this.returnMainMenu.Size = new System.Drawing.Size(165, 40);
             this.returnMainMenu.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             this.lbl11.AutoSize = true;
             this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl11.Location = new System.Drawing.Point(33, 203);
+            this.lbl11.Location = new System.Drawing.Point(92, 203);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(97, 22);
             this.lbl11.TabIndex = 5;
@@ -138,7 +138,7 @@
             // 
             this.lbl10.AutoSize = true;
             this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl10.Location = new System.Drawing.Point(33, 115);
+            this.lbl10.Location = new System.Drawing.Point(92, 115);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(84, 22);
             this.lbl10.TabIndex = 3;
@@ -148,7 +148,7 @@
             // 
             this.lbl9.AutoSize = true;
             this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl9.Location = new System.Drawing.Point(100, 48);
+            this.lbl9.Location = new System.Drawing.Point(119, 36);
             this.lbl9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(292, 29);
