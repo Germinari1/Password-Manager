@@ -109,5 +109,13 @@ namespace Password_Manager_SDEV265
             _form4.Show();
             this.Hide();
         }
+
+        private void exitApplication_Click(object sender, EventArgs e)
+        {
+            /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            // Exits/closes the application
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+            Application.Exit();
+        }
     }
 }

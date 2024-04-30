@@ -41,11 +41,13 @@
             this.txb4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
+            this.exitApplication = new System.Windows.Forms.Button();
             this.pnl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl2
             // 
+            this.pnl2.Controls.Add(this.exitApplication);
             this.pnl2.Controls.Add(this.displayCredentials);
             this.pnl2.Controls.Add(this.selectedPlatformLabel);
             this.pnl2.Controls.Add(this.platformNameValidationLabel);
@@ -61,7 +63,7 @@
             this.pnl2.Location = new System.Drawing.Point(574, 217);
             this.pnl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl2.Name = "pnl2";
-            this.pnl2.Size = new System.Drawing.Size(570, 572);
+            this.pnl2.Size = new System.Drawing.Size(570, 633);
             this.pnl2.TabIndex = 8;
             // 
             // displayCredentials
@@ -175,6 +177,18 @@
             this.lbl4.TabIndex = 0;
             this.lbl4.Text = "Welcome to your dashboard.";
             // 
+            // exitApplication
+            // 
+            this.exitApplication.BackColor = System.Drawing.SystemColors.ControlText;
+            this.exitApplication.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.exitApplication.Location = new System.Drawing.Point(38, 556);
+            this.exitApplication.Name = "exitApplication";
+            this.exitApplication.Size = new System.Drawing.Size(171, 40);
+            this.exitApplication.TabIndex = 15;
+            this.exitApplication.Text = "Exit application";
+            this.exitApplication.UseVisualStyleBackColor = false;
+            this.exitApplication.Click += new System.EventHandler(this.exitApplication_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -206,5 +220,6 @@
         private System.Windows.Forms.Label platformNameValidationLabel;
         private System.Windows.Forms.Label selectedPlatformLabel;
         private System.Windows.Forms.Button displayCredentials;
+        private System.Windows.Forms.Button exitApplication;
     }
 }
