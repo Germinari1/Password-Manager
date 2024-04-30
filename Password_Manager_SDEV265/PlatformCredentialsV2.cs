@@ -2,7 +2,9 @@
 // Author: Lucas Germinari Carreira
 // Last modified: 04/16/2024
 // Description(class implementation file): This file contains the PlatformCredentialsV2 class, which is used to store platform credentials in a secure way. Also, it defined the AESThenHMAC class, which is used to encrypt and decrypt the credentials.
-// Notes: Encryption algorithm used: AES (Advanced Encryption Standard)
+// Notes:
+    - Encryption algorithm used: AES (Advanced Encryption Standard)
+    - This class receives the sufix "V2" because it is an improved and version of the PlatformCredentials class (which was already removed from the application).
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
 using System;
