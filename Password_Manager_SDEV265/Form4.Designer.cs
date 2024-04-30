@@ -37,9 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbl6 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
-            this.dgv1 = new System.Windows.Forms.DataGridView();
             this.pnl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl3
@@ -52,7 +50,7 @@
             this.pnl3.Controls.Add(this.label4);
             this.pnl3.Controls.Add(this.lbl6);
             this.pnl3.Controls.Add(this.lbl5);
-            this.pnl3.Location = new System.Drawing.Point(222, 108);
+            this.pnl3.Location = new System.Drawing.Point(627, 298);
             this.pnl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(480, 377);
@@ -134,29 +132,19 @@
             this.lbl5.TabIndex = 0;
             this.lbl5.Text = "Get Authentication before";
             // 
-            // dgv1
-            // 
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(746, 108);
-            this.dgv1.Name = "dgv1";
-            this.dgv1.RowHeadersWidth = 51;
-            this.dgv1.RowTemplate.Height = 24;
-            this.dgv1.Size = new System.Drawing.Size(327, 171);
-            this.dgv1.TabIndex = 10;
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.pnl3);
-            this.Controls.Add(this.dgv1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.pnl3.ResumeLayout(false);
             this.pnl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,6 +160,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.DataGridView dgv1;
     }
 }

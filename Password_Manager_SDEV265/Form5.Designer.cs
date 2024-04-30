@@ -39,13 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl9 = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
-            this.platformLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.dgv4 = new System.Windows.Forms.DataGridView();
-            this.tempDebug = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +54,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lbl10);
             this.panel1.Controls.Add(this.lbl9);
-            this.panel1.Location = new System.Drawing.Point(330, 69);
+            this.panel1.Location = new System.Drawing.Point(657, 215);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 554);
@@ -161,75 +155,19 @@
             this.lbl9.TabIndex = 0;
             this.lbl9.Text = "This is your information.";
             // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.descriptionLabel.Location = new System.Drawing.Point(233, 394);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(60, 20);
-            this.descriptionLabel.TabIndex = 13;
-            this.descriptionLabel.Text = "label11";
-            // 
-            // platformLabel
-            // 
-            this.platformLabel.AutoSize = true;
-            this.platformLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.platformLabel.Location = new System.Drawing.Point(233, 212);
-            this.platformLabel.Name = "platformLabel";
-            this.platformLabel.Size = new System.Drawing.Size(60, 20);
-            this.platformLabel.TabIndex = 11;
-            this.platformLabel.Text = "label10";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.passwordLabel.Location = new System.Drawing.Point(233, 297);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(51, 20);
-            this.passwordLabel.TabIndex = 10;
-            this.passwordLabel.Text = "label2";
-            // 
-            // dgv4
-            // 
-            this.dgv4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv4.Location = new System.Drawing.Point(932, 69);
-            this.dgv4.Name = "dgv4";
-            this.dgv4.RowHeadersWidth = 51;
-            this.dgv4.RowTemplate.Height = 24;
-            this.dgv4.Size = new System.Drawing.Size(450, 554);
-            this.dgv4.TabIndex = 12;
-            // 
-            // tempDebug
-            // 
-            this.tempDebug.AutoSize = true;
-            this.tempDebug.Location = new System.Drawing.Point(152, 100);
-            this.tempDebug.Name = "tempDebug";
-            this.tempDebug.Size = new System.Drawing.Size(51, 20);
-            this.tempDebug.TabIndex = 14;
-            this.tempDebug.Text = "label1";
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 692);
-            this.Controls.Add(this.tempDebug);
-            this.Controls.Add(this.dgv4);
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.platformLabel);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.descriptionLabel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form5";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv4)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -237,19 +175,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Label lbl12;
-        private System.Windows.Forms.Label platformLabel;
-        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button returnMainMenu;
         private System.Windows.Forms.Label lbl11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.Label lbl9;
-        private System.Windows.Forms.DataGridView dgv4;
         private System.Windows.Forms.TextBox descriptionLabel_;
         private System.Windows.Forms.TextBox passwordLabel_;
         private System.Windows.Forms.TextBox platformLabel_;
-        private System.Windows.Forms.Label tempDebug;
     }
 }

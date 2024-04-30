@@ -39,5 +39,10 @@ namespace Password_Manager_SDEV265
                 MessageBox.Show("Invalid username or password.");
             }
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

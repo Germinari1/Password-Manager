@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnl2 = new System.Windows.Forms.Panel();
+            this.displayCredentials = new System.Windows.Forms.Button();
+            this.selectedPlatformLabel = new System.Windows.Forms.Label();
             this.platformNameValidationLabel = new System.Windows.Forms.Label();
             this.btn3 = new System.Windows.Forms.Button();
             this.txb6 = new System.Windows.Forms.TextBox();
@@ -39,11 +41,7 @@
             this.txb4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
-            this.dgv3 = new System.Windows.Forms.DataGridView();
-            this.selectedPlatformLabel = new System.Windows.Forms.Label();
-            this.displayCredentials = new System.Windows.Forms.Button();
             this.pnl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl2
@@ -60,11 +58,32 @@
             this.pnl2.Controls.Add(this.txb4);
             this.pnl2.Controls.Add(this.label3);
             this.pnl2.Controls.Add(this.lbl4);
-            this.pnl2.Location = new System.Drawing.Point(315, 60);
+            this.pnl2.Location = new System.Drawing.Point(574, 217);
             this.pnl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(570, 572);
             this.pnl2.TabIndex = 8;
+            // 
+            // displayCredentials
+            // 
+            this.displayCredentials.BackColor = System.Drawing.SystemColors.ControlText;
+            this.displayCredentials.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.displayCredentials.Location = new System.Drawing.Point(352, 529);
+            this.displayCredentials.Name = "displayCredentials";
+            this.displayCredentials.Size = new System.Drawing.Size(171, 40);
+            this.displayCredentials.TabIndex = 14;
+            this.displayCredentials.Text = "Display credential";
+            this.displayCredentials.UseVisualStyleBackColor = false;
+            this.displayCredentials.Click += new System.EventHandler(this.displayCredentials_Click);
+            // 
+            // selectedPlatformLabel
+            // 
+            this.selectedPlatformLabel.AutoSize = true;
+            this.selectedPlatformLabel.Location = new System.Drawing.Point(322, 491);
+            this.selectedPlatformLabel.Name = "selectedPlatformLabel";
+            this.selectedPlatformLabel.Size = new System.Drawing.Size(142, 20);
+            this.selectedPlatformLabel.TabIndex = 13;
+            this.selectedPlatformLabel.Text = "Selected platform: ";
             // 
             // platformNameValidationLabel
             // 
@@ -156,50 +175,18 @@
             this.lbl4.TabIndex = 0;
             this.lbl4.Text = "Welcome to your dashboard.";
             // 
-            // dgv3
-            // 
-            this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv3.Location = new System.Drawing.Point(958, 60);
-            this.dgv3.Name = "dgv3";
-            this.dgv3.RowHeadersWidth = 51;
-            this.dgv3.RowTemplate.Height = 24;
-            this.dgv3.Size = new System.Drawing.Size(225, 572);
-            this.dgv3.TabIndex = 13;
-            // 
-            // selectedPlatformLabel
-            // 
-            this.selectedPlatformLabel.AutoSize = true;
-            this.selectedPlatformLabel.Location = new System.Drawing.Point(322, 491);
-            this.selectedPlatformLabel.Name = "selectedPlatformLabel";
-            this.selectedPlatformLabel.Size = new System.Drawing.Size(142, 20);
-            this.selectedPlatformLabel.TabIndex = 13;
-            this.selectedPlatformLabel.Text = "Selected platform: ";
-            // 
-            // displayCredentials
-            // 
-            this.displayCredentials.BackColor = System.Drawing.SystemColors.ControlText;
-            this.displayCredentials.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.displayCredentials.Location = new System.Drawing.Point(352, 529);
-            this.displayCredentials.Name = "displayCredentials";
-            this.displayCredentials.Size = new System.Drawing.Size(171, 40);
-            this.displayCredentials.TabIndex = 14;
-            this.displayCredentials.Text = "Display credential";
-            this.displayCredentials.UseVisualStyleBackColor = false;
-            this.displayCredentials.Click += new System.EventHandler(this.displayCredentials_Click);
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.dgv3);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.pnl2);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form3";
             this.Text = "Form3";
             this.pnl2.ResumeLayout(false);
             this.pnl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,7 +203,6 @@
         private System.Windows.Forms.TextBox txb4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.DataGridView dgv3;
         private System.Windows.Forms.Label platformNameValidationLabel;
         private System.Windows.Forms.Label selectedPlatformLabel;
         private System.Windows.Forms.Button displayCredentials;

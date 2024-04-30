@@ -36,9 +36,7 @@
             this.lbl3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.dgv2 = new System.Windows.Forms.DataGridView();
             this.pnl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl1
@@ -62,7 +60,7 @@
             this.pnl1.Controls.Add(this.label1);
             this.pnl1.Controls.Add(this.lbl2);
             this.pnl1.Controls.Add(this.lbl1);
-            this.pnl1.Location = new System.Drawing.Point(362, 65);
+            this.pnl1.Location = new System.Drawing.Point(593, 283);
             this.pnl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(543, 411);
@@ -124,30 +122,19 @@
             this.lbl2.TabIndex = 3;
             this.lbl2.Text = "Username";
             // 
-            // dgv2
-            // 
-            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv2.Location = new System.Drawing.Point(998, 129);
-            this.dgv2.Name = "dgv2";
-            this.dgv2.RowHeadersWidth = 51;
-            this.dgv2.RowTemplate.Height = 24;
-            this.dgv2.Size = new System.Drawing.Size(260, 294);
-            this.dgv2.TabIndex = 11;
-            this.dgv2.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 977);
-            this.Controls.Add(this.dgv2);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.pnl1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnl1.ResumeLayout(false);
             this.pnl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,7 +149,6 @@
         private System.Windows.Forms.TextBox txb2;
         private System.Windows.Forms.TextBox txb1;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.DataGridView dgv2;
     }
 }
 
