@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.panel1 = new System.Windows.Forms.Panel();
             this.descriptionLabel_ = new System.Windows.Forms.TextBox();
             this.passwordLabel_ = new System.Windows.Forms.TextBox();
@@ -39,11 +40,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.descriptionLabel_);
             this.panel1.Controls.Add(this.passwordLabel_);
             this.panel1.Controls.Add(this.platformLabel_);
@@ -155,6 +159,16 @@
             this.lbl9.TabIndex = 0;
             this.lbl9.Text = "This is your information.";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(424, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(86, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -167,6 +181,7 @@
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +199,6 @@
         private System.Windows.Forms.TextBox descriptionLabel_;
         private System.Windows.Forms.TextBox passwordLabel_;
         private System.Windows.Forms.TextBox platformLabel_;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
