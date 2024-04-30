@@ -2,7 +2,7 @@
 // Author: Lucas Germinari Carreira
 // Last modified: 04/22/2024
 // Description(class implementation file): Class that keeps track of the current user and the vault, making those objects accessible throughout the application.
-//  It also keeps a dictionary of platform credentials to map platform names to PlatformCredentialsV2 objects.
+    It also keeps a dictionary of platform credentials to map platform names to PlatformCredentialsV2 objects.
 // Notes: 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 using System;
