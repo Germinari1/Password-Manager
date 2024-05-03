@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl2 = new System.Windows.Forms.Panel();
+            this.exitApplication = new System.Windows.Forms.Button();
             this.displayCredentials = new System.Windows.Forms.Button();
             this.selectedPlatformLabel = new System.Windows.Forms.Label();
             this.platformNameValidationLabel = new System.Windows.Forms.Label();
@@ -41,12 +42,17 @@
             this.txb4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
-            this.exitApplication = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl2
             // 
+            this.pnl2.Controls.Add(this.label4);
+            this.pnl2.Controls.Add(this.label2);
+            this.pnl2.Controls.Add(this.label1);
             this.pnl2.Controls.Add(this.exitApplication);
             this.pnl2.Controls.Add(this.displayCredentials);
             this.pnl2.Controls.Add(this.selectedPlatformLabel);
@@ -65,6 +71,18 @@
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(570, 633);
             this.pnl2.TabIndex = 8;
+            // 
+            // exitApplication
+            // 
+            this.exitApplication.BackColor = System.Drawing.SystemColors.ControlText;
+            this.exitApplication.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.exitApplication.Location = new System.Drawing.Point(38, 556);
+            this.exitApplication.Name = "exitApplication";
+            this.exitApplication.Size = new System.Drawing.Size(171, 40);
+            this.exitApplication.TabIndex = 15;
+            this.exitApplication.Text = "Exit application";
+            this.exitApplication.UseVisualStyleBackColor = false;
+            this.exitApplication.Click += new System.EventHandler(this.exitApplication_Click);
             // 
             // displayCredentials
             // 
@@ -177,17 +195,32 @@
             this.lbl4.TabIndex = 0;
             this.lbl4.Text = "Welcome to your dashboard.";
             // 
-            // exitApplication
+            // label1
             // 
-            this.exitApplication.BackColor = System.Drawing.SystemColors.ControlText;
-            this.exitApplication.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.exitApplication.Location = new System.Drawing.Point(38, 556);
-            this.exitApplication.Name = "exitApplication";
-            this.exitApplication.Size = new System.Drawing.Size(171, 40);
-            this.exitApplication.TabIndex = 15;
-            this.exitApplication.Text = "Exit application";
-            this.exitApplication.UseVisualStyleBackColor = false;
-            this.exitApplication.Click += new System.EventHandler(this.exitApplication_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(326, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(326, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(330, 171);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Description";
             // 
             // Form3
             // 
@@ -221,5 +254,8 @@
         private System.Windows.Forms.Label selectedPlatformLabel;
         private System.Windows.Forms.Button displayCredentials;
         private System.Windows.Forms.Button exitApplication;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

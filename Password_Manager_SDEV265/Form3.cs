@@ -85,6 +85,9 @@ namespace Password_Manager_SDEV265
 
                     //add credential to listbox
                     lstb1.Items.Add(txb3.Text);
+                    txb3.Text = "";
+                    txb4.Text = "";
+                    txb5.Text = "";
 
                     //update datagridview
                     //dgv3.DataSource = ApplicationContext.Vault._credentials;
