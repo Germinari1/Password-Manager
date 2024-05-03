@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtbConfirmPsw = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +58,8 @@
             // 
             // pnl1
             // 
+            this.pnl1.Controls.Add(this.txtbConfirmPsw);
+            this.pnl1.Controls.Add(this.label2);
             this.pnl1.Controls.Add(this.btn1);
             this.pnl1.Controls.Add(this.txb2);
             this.pnl1.Controls.Add(this.txb1);
@@ -73,7 +77,7 @@
             // 
             this.btn1.BackColor = System.Drawing.SystemColors.ControlText;
             this.btn1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn1.Location = new System.Drawing.Point(218, 295);
+            this.btn1.Location = new System.Drawing.Point(218, 368);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(84, 40);
             this.btn1.TabIndex = 8;
@@ -135,6 +139,26 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // txtbConfirmPsw
+            // 
+            this.txtbConfirmPsw.Location = new System.Drawing.Point(123, 336);
+            this.txtbConfirmPsw.Name = "txtbConfirmPsw";
+            this.txtbConfirmPsw.Size = new System.Drawing.Size(301, 26);
+            this.txtbConfirmPsw.TabIndex = 10;
+            this.txtbConfirmPsw.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(116, 285);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(322, 36);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Confirm your password";
+            this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -165,6 +189,8 @@
         private System.Windows.Forms.TextBox txb1;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtbConfirmPsw;
+        private System.Windows.Forms.Label label2;
     }
 }
 

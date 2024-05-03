@@ -15,6 +15,11 @@ namespace Password_Manager_SDEV265
         public Form1()
         {
             InitializeComponent();
+            if (ApplicationContext.CurrentUser == null)
+            {
+                txtbConfirmPsw.Visible = true;
+                label2.Visible = true;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,12 +47,13 @@ namespace Password_Manager_SDEV265
             // Get user credentials from login form
             string username = txb1.Text;
             string password = txb2.Text;
+            string confirmPassword = txtbConfirmPsw.Text;
 
             // Create a new User instance
             User user = new User(username, password);
 
             // Authenticate the user
-            if (user.VerifyMasterPassword(password))
+            if (user.VerifyMasterPassword(password) && (ApplicationContext.CurrentUser != null || confirmPassword == password))
             {
                 //create vault for user
                 Vault vault = new Vault(username, password);
@@ -74,6 +80,11 @@ namespace Password_Manager_SDEV265
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
