@@ -1,6 +1,6 @@
 # SDEV 265 Password Manager
 ## Introduction
-  This project is a password manager developed in C#. It uses Windows Form to implement the GUI and the .NET framework for some of its functionalities. The goal of this project is to provide users with a simple, secure, and intuitive application to store passwords.
+  This project is a password manager developed in C#. It uses Windows Form to implement the GUI and the .NET framework for some of its functionalities. The goal of this project is to provide users with a simple, secure, and intuitive application to store passwords and user credentials.
   
 ## How to install and run the project
   First, it is important to note that this application is exclusive to Windows, as it uses Windows Form as one of its technologies. The branch "launch" has an exported and compiled version of the project, which should be able to run like any other app on Windows. To access it, download the zipped folder of the project from GitHub, access the folder on your local machine, and look for the application file. Then, click on it. Tests showed that this approach might not work on all machines, so the steps to run the application from an IDE (Visual Studio will be used to explain) will also be described.
